@@ -67,3 +67,27 @@ const pessoaObj: { name: string; surname: string } = {
   name: "Pietro",
   surname: "Bergamaschi",
 };
+
+// 8 - props opcionais
+function showNumbers(a: number, b: number, c?: number) {
+  console.log("A: " + a);
+  console.log("B: " + b);
+  if (c) {
+    console.log("C: " + c);
+  }
+}
+
+showNumbers(1, 2, 3);
+showNumbers(4, 5);
+
+// 9 - validação de props opcionais
+function advancedGreeting(firstname: string, lastname?: string) {
+  if (lastname !== undefined) {
+    return `Olá ${firstname} ${lastname}, tudo bem?`;
+  }
+
+  return `Olá ${firstname}, tudo bem?`;
+}
+
+console.log(advancedGreeting("Pietro", "Bergamaschi"));
+console.log(advancedGreeting("Betotle"));
