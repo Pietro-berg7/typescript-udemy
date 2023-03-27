@@ -29,3 +29,14 @@ fullName = firstName + " " + lastName;
 console.log(fullName);
 
 console.log(typeof fullName);
+
+// 3 - booleans
+let a: boolean = false;
+
+console.log(a);
+
+console.log(typeof a);
+
+a = true;
+
+console.log(a);
