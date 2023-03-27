@@ -43,3 +43,27 @@ function greeting(name: string): string {
 }
 
 console.log(greeting("Pietro"));
+
+// 6 -  função anonima
+setTimeout(function () {
+  const sallary: number = 1000;
+
+  // console.log(parseFloat(sallary));
+
+  // console.log(sallary);
+}, 2000);
+
+// 7 - tipos de objeto
+function passCoordinates(coord: { x: number; y: number }) {
+  console.log("X coordinates: " + coord.x);
+  console.log("Y coordinates: " + coord.y);
+}
+
+const objCoord = { x: 329, y: 84.2 };
+
+passCoordinates(objCoord);
+
+const pessoaObj: { name: string; surname: string } = {
+  name: "Pietro",
+  surname: "Bergamaschi",
+};
