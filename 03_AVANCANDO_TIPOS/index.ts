@@ -21,3 +21,10 @@ console.log(nums);
 // nums.push("teste");
 
 console.log(nums[0], nums[5]);
+
+// 3 - any
+const arr1: any = [1, "teste", true, [], { nome: "Pietro" }];
+
+console.log(arr1);
+
+arr1.push([1, 2, 3]);
