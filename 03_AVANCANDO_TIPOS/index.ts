@@ -28,3 +28,11 @@ const arr1: any = [1, "teste", true, [], { nome: "Pietro" }];
 console.log(arr1);
 
 arr1.push([1, 2, 3]);
+
+// 4 - parâmetros tipados
+function soma(a: number, b: number) {
+  console.log(a + b);
+}
+
+soma(4, 5);
+// soma("a", "b");
