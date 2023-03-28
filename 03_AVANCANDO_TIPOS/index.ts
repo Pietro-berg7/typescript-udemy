@@ -149,8 +149,6 @@ interface Person {
   name: string;
 }
 
-const randomNumber = 10;
-
 interface Person {
   age: number;
 }
@@ -166,3 +164,23 @@ type personType = {
 // type personType = {
 //     age: number
 // }
+
+// 15 - literal types
+let test: "testando";
+
+test = "testando";
+
+// test = "opa"
+
+function showDirection(direction: "left" | "right" | "center") {
+  console.log(`The direction is: ${direction}`);
+}
+
+showDirection("left");
+showDirection("center");
+//showDirection("up")
+
+// 16 - non-null assertion
+const p = document.getElementById("some-p");
+
+console.log(p!.innerText);

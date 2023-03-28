@@ -93,9 +93,21 @@ const itemCoords = {
     z: 12,
 };
 showCoords(itemCoords);
-const randomNumber = 10;
 const somePerson = { name: "João", age: 25 };
 console.log(somePerson);
 // type personType = {
 //     age: number
 // }
+// 15 - literal types
+let test;
+test = "testando";
+// test = "opa"
+function showDirection(direction) {
+    console.log(`The direction is: ${direction}`);
+}
+showDirection("left");
+showDirection("center");
+//showDirection("up")
+// 16 - non-null assertion
+const p = document.getElementById("some-p");
+console.log(p.innerText);
