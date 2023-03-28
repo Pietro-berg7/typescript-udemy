@@ -184,3 +184,22 @@ showDirection("center");
 const p = document.getElementById("some-p");
 
 console.log(p!.innerText);
+
+// 17 - big int
+
+let n: bigint;
+
+// n = 1
+
+n = 1000n;
+
+// console.log(n + 1)
+
+console.log(n + 10n);
+
+// 18 - symbol
+
+let symbolA = Symbol("a");
+let symbolB = Symbol("a");
+
+console.log(symbolA === symbolB);
