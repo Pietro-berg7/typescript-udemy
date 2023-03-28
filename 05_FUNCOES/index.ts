@@ -103,3 +103,26 @@ function showErrorMsg(msg: string): never {
 }
 
 // showErrorMsg('Algo deu errado!')
+
+// 10 - rest operator como parametro
+function sumAll(...n: number[]) {
+  return n.reduce((number, sum) => sum + number);
+}
+
+console.log(sumAll(1, 2, 3, 4));
+console.log(sumAll(4, 5, 6));
+
+// 11 - destructuring como parametro
+function showProductDetails({
+  name,
+  price,
+}: {
+  name: string;
+  price: number;
+}): string {
+  return `O nome do produto é ${name} e o seu preço é R$${price}`;
+}
+
+const shirt = { name: "Camisa", price: 59.99 };
+
+console.log(showProductDetails(shirt));
