@@ -16,3 +16,19 @@ function preGreeting(f, userName) {
 }
 preGreeting(greeting, "Pietro");
 preGreeting(greeting, "João");
+// 3 - generic function
+function firstElement(arr) {
+    return arr[0];
+}
+console.log(firstElement([1, 2, 3]));
+console.log(firstElement([true, false]));
+console.log(firstElement([]));
+// firstElement('a')
+function mergeObjects(obj1, obj2) {
+    return {
+        ...obj1,
+        ...obj2,
+    };
+}
+const newObj = mergeObjects({ name: "Pietro" }, { age: 22, job: "Programmer" });
+console.log(newObj);
