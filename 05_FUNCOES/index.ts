@@ -56,3 +56,22 @@ function biggestNumber<T extends number | string>(a: T, b: T): T {
 
 console.log(biggestNumber(5, 2));
 console.log(biggestNumber("10", "5"));
+
+// 5 - especificar tipo de argumento
+function mergeArrays<T>(arr1: T[], arr2: T[]) {
+  return arr1.concat(arr2);
+}
+
+console.log(mergeArrays([1, 2, 3], [4, 5, 6]));
+console.log(mergeArrays<number | string>([1, 2, 3], ["teste"]));
+
+// 6 - parametros opcionais
+function modernGreeting(name: string, greet?: string) {
+  if (greet) {
+    return `Olá ${greet} ${name}, tudo bem?`;
+  }
+  return `Olá ${name}!`;
+}
+
+console.log(modernGreeting("Pietro", "Sr."));
+console.log(modernGreeting("João"));

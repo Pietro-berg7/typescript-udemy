@@ -45,3 +45,18 @@ function biggestNumber(a, b) {
 }
 console.log(biggestNumber(5, 2));
 console.log(biggestNumber("10", "5"));
+// 5 - especificar tipo de argumento
+function mergeArrays(arr1, arr2) {
+    return arr1.concat(arr2);
+}
+console.log(mergeArrays([1, 2, 3], [4, 5, 6]));
+console.log(mergeArrays([1, 2, 3], ["teste"]));
+// 6 - parametros opcionais
+function modernGreeting(name, greet) {
+    if (greet) {
+        return `Olá ${greet} ${name}, tudo bem?`;
+    }
+    return `Olá ${name}!`;
+}
+console.log(modernGreeting("Pietro", "Sr."));
+console.log(modernGreeting("João"));
