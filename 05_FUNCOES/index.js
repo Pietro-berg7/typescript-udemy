@@ -60,3 +60,26 @@ function modernGreeting(name, greet) {
 }
 console.log(modernGreeting("Pietro", "Sr."));
 console.log(modernGreeting("João"));
+// 7 - parametro default
+function somaDefault(n, m = 10) {
+    return n + m;
+}
+console.log(somaDefault(5, 20));
+console.log(somaDefault(5));
+// 8 - unknown
+function doSomething(x) {
+    if (typeof x === "number") {
+        console.log("É um número!");
+    }
+    else {
+        console.log("Não é um número!");
+    }
+    // x()
+}
+doSomething(10);
+doSomething(false);
+// 9 - never
+function showErrorMsg(msg) {
+    throw new Error(msg);
+}
+// showErrorMsg('Algo deu errado!')
