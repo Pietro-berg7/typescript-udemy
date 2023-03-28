@@ -84,3 +84,18 @@ function showId(id) {
 }
 showId(1);
 showId("200");
+function showCoords(obj) {
+    console.log(`X: ${obj.x}, Y: ${obj.y}, Z: ${obj.z}`);
+}
+const itemCoords = {
+    x: 10,
+    y: 15,
+    z: 12,
+};
+showCoords(itemCoords);
+const randomNumber = 10;
+const somePerson = { name: "João", age: 25 };
+console.log(somePerson);
+// type personType = {
+//     age: number
+// }
