@@ -31,3 +31,32 @@ function operations(arr: number[], operation?: string | undefined) {
 operations([10, 20, 30], "sum");
 operations([10, 20, 30], "multiply");
 operations([10, 20, 30], "");
+
+// 3 - instanceof
+class User {
+  name;
+
+  constructor(name: string) {
+    this.name = name;
+  }
+}
+
+class SuperUser extends User {
+  constructor(name: string) {
+    super(name);
+  }
+}
+
+const jhon = new User("Jhon");
+const paul = new SuperUser("Paul");
+
+function userGreeting(user: object) {
+  if (user instanceof SuperUser) {
+    console.log(`Olá ${user.name}, deseja ver os dados?`);
+  } else if (user instanceof User) {
+    console.log(`Olá ${user.name}!`);
+  }
+}
+
+userGreeting(jhon);
+userGreeting(paul);

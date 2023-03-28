@@ -33,3 +33,26 @@ function operations(arr, operation) {
 operations([10, 20, 30], "sum");
 operations([10, 20, 30], "multiply");
 operations([10, 20, 30], "");
+// 3 - instanceof
+class User {
+    constructor(name) {
+        this.name = name;
+    }
+}
+class SuperUser extends User {
+    constructor(name) {
+        super(name);
+    }
+}
+const jhon = new User("Jhon");
+const paul = new SuperUser("Paul");
+function userGreeting(user) {
+    if (user instanceof SuperUser) {
+        console.log(`Olá ${user.name}, deseja ver os dados?`);
+    }
+    else if (user instanceof User) {
+        console.log(`Olá ${user.name}!`);
+    }
+}
+userGreeting(jhon);
+userGreeting(paul);
