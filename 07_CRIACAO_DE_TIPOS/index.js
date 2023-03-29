@@ -28,3 +28,23 @@ const myPen = {
 };
 console.log(myCar);
 console.log(myPen);
+// 4 - type parameters
+function getSomeKey(obj, key) {
+    return `A chave ${key.toString()} está presente no objeto e tem o valor de ${obj[key]}`;
+}
+const server = {
+    hd: "2TB",
+    ram: "32GB",
+};
+console.log(getSomeKey(server, "ram"));
+function showCharName(obj, name) {
+    return `${obj[name]}`;
+}
+const myChar = {
+    name: "Pietro",
+    age: 22,
+    hasDriveLicense: false,
+};
+console.log(showCharName(myChar, "name"));
+console.log(showCharName(myChar, "age"));
+// console.log(showCharName([0]))
