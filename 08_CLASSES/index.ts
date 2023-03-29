@@ -286,3 +286,57 @@ pClass.showPrivateMethodResult();
 //     this.privateMethod()
 //   }
 // }
+
+// 14 - static members
+class StaticMembers {
+  static prop = "Teste static";
+
+  static staticMethod() {
+    console.log("Este método é static!");
+  }
+}
+
+console.log(StaticMembers.prop);
+
+StaticMembers.staticMethod();
+
+// 15 - generic class
+class Item<T, U> {
+  first;
+  second;
+
+  constructor(first: T, second: U) {
+    this.first = first;
+    this.second = second;
+  }
+
+  get showFirst() {
+    return `O first é: ${this.first}`;
+  }
+}
+
+const newItem = new Item("caixa", "surpresa");
+
+console.log(newItem.showFirst);
+
+// 16 - parameter properties
+class ParameterClass {
+  constructor(public name: string, private qty: number, private price: number) {
+    this.name = name;
+    this.qty = qty;
+  }
+
+  get showQty() {
+    return `Qtd total: ${this.qty}`;
+  }
+
+  get showPrice() {
+    return `Preço: R$${this.price}`;
+  }
+}
+
+const newShirt = new ParameterClass("Camisa", 5, 19.99);
+
+console.log(newShirt.showQty);
+
+// console.log(newShirt.qty)
