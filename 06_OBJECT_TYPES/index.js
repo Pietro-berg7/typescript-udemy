@@ -54,3 +54,20 @@ myArray = myArray.map((item) => {
     return `Fruta: ${item}`;
 });
 console.log(myArray);
+const myNumberArray = [1, 2, 3, 4, 5];
+// const myNumberArray2: fiveNumbers = [1,2,3,4,5,6]
+// const mixedArray: fiveNumbers = ["teste", 1]
+console.log(myNumberArray);
+const anotherUser = ["Pietro", 30];
+console.log(anotherUser[0]);
+anotherUser[0] = "João";
+console.log(anotherUser[0]);
+// anotherUser[1] = "Teste";
+// 9 - tuplas com readonly
+function showNumbers(numbers) {
+    // numbers[0] = 10
+    console.log(numbers[0]);
+    console.log(numbers[1]);
+}
+showNumbers([1, 2]);
+// showNumbers(['teste', 1])

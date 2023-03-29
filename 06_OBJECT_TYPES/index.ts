@@ -128,3 +128,34 @@ myArray = myArray.map((item) => {
 });
 
 console.log(myArray);
+
+// 8 - tuplas
+type fiveNumbers = [number, number, number, number, number];
+
+const myNumberArray: fiveNumbers = [1, 2, 3, 4, 5];
+// const myNumberArray2: fiveNumbers = [1,2,3,4,5,6]
+// const mixedArray: fiveNumbers = ["teste", 1]
+
+console.log(myNumberArray);
+
+type nameAndAge = [string, number];
+
+const anotherUser: nameAndAge = ["Pietro", 30];
+
+console.log(anotherUser[0]);
+
+anotherUser[0] = "João";
+
+console.log(anotherUser[0]);
+
+// anotherUser[1] = "Teste";
+
+// 9 - tuplas com readonly
+function showNumbers(numbers: readonly [number, number]) {
+  // numbers[0] = 10
+  console.log(numbers[0]);
+  console.log(numbers[1]);
+}
+
+showNumbers([1, 2]);
+// showNumbers(['teste', 1])
