@@ -53,3 +53,42 @@ const fusca: Car = {
 };
 
 // fusca.wheels = 5
+
+// 4 - index signature
+interface CoordObject {
+  [index: string]: number;
+}
+
+let coords: CoordObject = {
+  x: 10,
+};
+
+// coords.y = 'teste'
+coords.y = 15;
+
+console.log(coords);
+
+interface OnlyNumberArray {
+  [index: number]: number;
+}
+
+const arr1: OnlyNumberArray = [1, 2, 3];
+// const arr2: OnlyNumberArray = ['1', '2', '3']
+
+// 5 - extending types
+interface Human {
+  name: string;
+  age: number;
+}
+
+interface SuperHuman extends Human {
+  superpowers: string[];
+}
+
+const goku: SuperHuman = {
+  name: "Goku",
+  age: 50,
+  superpowers: ["Kamehameha", "Genki Dama"],
+};
+
+console.log(goku);

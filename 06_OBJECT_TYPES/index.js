@@ -25,4 +25,16 @@ const fusca = {
     brand: "VW",
     wheels: 4,
 };
-// fusca.wheels = 5
+let coords = {
+    x: 10,
+};
+// coords.y = 'teste'
+coords.y = 15;
+console.log(coords);
+const arr1 = [1, 2, 3];
+const goku = {
+    name: "Goku",
+    age: 50,
+    superpowers: ["Kamehameha", "Genki Dama"],
+};
+console.log(goku);
