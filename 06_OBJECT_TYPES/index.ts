@@ -92,3 +92,39 @@ const goku: SuperHuman = {
 };
 
 console.log(goku);
+
+// 6 - intersection types
+interface Character {
+  name: string;
+}
+
+interface Gun {
+  type: string;
+  caliber: number;
+}
+
+type HumanWithGun = Character & Gun;
+
+const arnold: HumanWithGun = {
+  name: "Arnold",
+  type: "Shotgun",
+  caliber: 12,
+};
+
+console.log(arnold);
+
+// 7 - read only array
+
+let myArray: ReadonlyArray<string> = ["Maçã", "Laranja", "Pêra"];
+
+// myArray[3] = 'Mamão'
+
+myArray.forEach((item) => {
+  console.log("Fruta: " + item);
+});
+
+myArray = myArray.map((item) => {
+  return `Fruta: ${item}`;
+});
+
+console.log(myArray);
