@@ -67,3 +67,41 @@ const volvo = new Truck("Volvo", 400);
 const scania = new Truck("Scania", 500);
 volvo.showDetails();
 scania.showDetails();
+// 7 - getter
+class Person {
+    constructor(name, surname) {
+        this.name = name;
+        this.surname = surname;
+    }
+    get fullName() {
+        return this.name + " " + this.surname;
+    }
+}
+const pietroBergamaschi = new Person("Pietro", "Bergamaschi");
+console.log(pietroBergamaschi.fullName);
+// 8 - setter
+class Coords {
+    set fillX(x) {
+        if (x === 0) {
+            return;
+        }
+        this.x = x;
+        console.log("X inserido com sucesso!");
+    }
+    set fillY(y) {
+        if (y === 0) {
+            return;
+        }
+        this.y = y;
+        console.log("Y inserido com sucesso!");
+    }
+    get getCoords() {
+        return `X: ${this.x} e Y: ${this.y}`;
+    }
+}
+const myCoords = new Coords();
+myCoords.fillX = 15;
+myCoords.fillY = 0;
+myCoords.fillY = 10;
+console.log(myCoords);
+console.log(myCoords.getCoords);
