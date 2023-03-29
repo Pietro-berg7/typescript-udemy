@@ -217,3 +217,72 @@ class Nova extends Base {
 const myNewClass = new Nova();
 
 myNewClass.someMethod();
+
+// 11 - public
+class C {
+  public x = 10;
+}
+
+const cInstance = new C();
+
+console.log(cInstance.x);
+
+// 12 - protected
+class D {
+  protected x = 10;
+
+  protected protectedMethod() {
+    console.log("Estou protegido!");
+  }
+}
+
+class E extends D {
+  showX() {
+    console.log("X: " + this.x);
+  }
+
+  useMethod() {
+    this.protectedMethod();
+  }
+}
+
+class F extends D {}
+
+const eInstance = new E();
+
+eInstance.showX();
+
+eInstance.useMethod();
+
+const fInstance = new F();
+
+// fInstance.showX();
+
+// 13 - private
+class PrivateClass {
+  private name = "Private";
+
+  showName() {
+    console.log(this.name);
+  }
+
+  private privateMethod() {
+    console.log("Sou privado!");
+  }
+
+  showPrivateMethodResult() {
+    this.privateMethod();
+  }
+}
+
+const pClass = new PrivateClass();
+
+pClass.showName();
+
+pClass.showPrivateMethodResult();
+
+// class TestingPrivate extends PrivateClass {
+//   myMethod() {
+//     this.privateMethod()
+//   }
+// }
