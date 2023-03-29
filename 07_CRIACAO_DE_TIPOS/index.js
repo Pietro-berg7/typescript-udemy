@@ -66,3 +66,5 @@ const newCar = {
     kg: 1000,
 };
 showKm(newCar.km);
+const someVar = 1;
+const testing = "some text";
