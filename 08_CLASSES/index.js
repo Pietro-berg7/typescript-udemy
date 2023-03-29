@@ -123,3 +123,16 @@ class TestingInterface {
         return `O título é: ${this.title}`;
     }
 }
+// 10 - override de métodos
+class Base {
+    someMethod() {
+        console.log("Alguma coisa!");
+    }
+}
+class Nova extends Base {
+    someMethod() {
+        console.log("Outra coisa!");
+    }
+}
+const myNewClass = new Nova();
+myNewClass.someMethod();
