@@ -79,3 +79,38 @@ const myChar: Character = {
 console.log(showCharName(myChar, "name"));
 console.log(showCharName(myChar, "age"));
 // console.log(showCharName([0]))
+
+// 6 - typeof type operator
+const userName: string = "Pietro";
+
+const userName2: typeof userName = "João";
+
+// const userName3: typeof userName = 3
+
+type x = typeof userName;
+
+const userName4: x = "Joaquim";
+
+// 7 - indexed access types
+type Truck = { km: number; kg: number; description: string };
+
+type Km = Truck["km"];
+
+const newTruck: Truck = {
+  km: 10000,
+  kg: 5000,
+  description: "Caminhão para pouca carga",
+};
+
+function showKm(km: Km) {
+  console.log(`O veículo tem a km de: ${km}`);
+}
+
+showKm(newTruck.km);
+
+const newCar = {
+  km: 5000,
+  kg: 1000,
+};
+
+showKm(newCar.km);
