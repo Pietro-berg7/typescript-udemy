@@ -220,6 +220,7 @@ class ParameterClass {
         this.price = price;
         this.name = name;
         this.qty = qty;
+        this.price = price;
     }
     get showQty() {
         return `Qtd total: ${this.qty}`;
@@ -229,5 +230,31 @@ class ParameterClass {
     }
 }
 const newShirt = new ParameterClass("Camisa", 5, 19.99);
+console.log(newShirt.name);
 console.log(newShirt.showQty);
-// console.log(newShirt.qty)
+console.log(newShirt.showPrice);
+// console.log(newShirt.price)
+// 17 - class expression
+const myClass = class {
+    constructor(name) {
+        this.name = name;
+    }
+};
+const pessoa = new myClass("Jones");
+console.log(pessoa);
+console.log(pessoa.name);
+// 18 - abstract class
+class AbstractClass {
+}
+// const newObj = new AbstractTest()
+class AbstractExample extends AbstractClass {
+    constructor(name) {
+        super();
+        this.name = name;
+    }
+    showName() {
+        console.log(`O nome é: ${this.name}`);
+    }
+}
+const newObjAbstract = new AbstractExample("Josias");
+newObjAbstract.showName();
