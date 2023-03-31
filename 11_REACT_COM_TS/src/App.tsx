@@ -5,7 +5,10 @@ import FirstComponent from "./components/FirstComponent";
 
 // 5 - Desestruturando props
 import SecondComponent from "./components/SecondComponent";
-import Destructuring from "./components/Destructuring";
+import Destructuring, { Category } from "./components/Destructuring";
+
+// 6 - useState
+import State from "./components/State";
 
 function App() {
   // 1 - Variáveis
@@ -36,7 +39,9 @@ function App() {
         content="Algum conteúdo"
         commentsQty={10}
         tags={["ts", "js"]}
+        category={Category.TS}
       />
+      <State />
     </div>
   );
 }
