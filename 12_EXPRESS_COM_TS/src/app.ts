@@ -48,6 +48,44 @@ app.get("/api/json", (req: Request, res: Response) => {
   });
 });
 
+// 7 - router parameters
+app.get("/api/product/:id", (req: Request, res: Response) => {
+  console.log(req.params);
+
+  const { id } = req.params;
+
+  if (id === "1") {
+    const product = {
+      id: 1,
+      name: "Boné",
+      price: 40.49,
+    };
+
+    return res.json(product);
+  } else {
+    return res.send("Produto não encontrado!");
+  }
+});
+
+// 8 - rotas complexas
+app.get("/api/product/:id/review/:reviewId", (req: Request, res: Response) => {
+  console.log(req.params);
+
+  const productId = req.params.id;
+  const reviewId = req.params.reviewId;
+
+  return res.send(`Acessando a review ${reviewId} do produto ${productId}!`);
+});
+
+// 9 - router handler
+function getUser(req: Request, res: Response) {
+  console.log(`Resgatando usuário com id: ${req.params.id}`);
+
+  return res.send("O usuário foi encontrado!");
+}
+
+app.get("/api/user/:id", getUser);
+
 app.listen(3000, () => {
   console.log("Aplicação de TS + Express funcionando!");
 });
